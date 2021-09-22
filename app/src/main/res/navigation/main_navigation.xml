@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="udacity.project.shoesstoreapp.presentation.instruction.InstructionFragment"
+        android:label="InstructionFragment"
+        tools:layout="@layout/fragment_instruction">
+        <action
+            android:id="@+id/action_instructionFragment_to_shoesListFragment"
+            app:destination="@id/shoesListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="udacity.project.shoesstoreapp.presentation.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoesDetailFragment"
+        android:name="udacity.project.shoesstoreapp.presentation.shoesdetail.ShoesDetailFragment"
+        android:label="ShoesDetailFragment"
+        tools:layout="@layout/fragment_shoes_detail"/>
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="udacity.project.shoesstoreapp.presentation.welcome.WelcomeFragment"
+        android:label="fragment_shoes_detail"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoesListFragment"
+        android:name="udacity.project.shoesstoreapp.presentation.shoeslist.ShoesListFragment"
+        android:label="ShoesListFragment"
+        tools:layout="@layout/fragment_shoes_list">
+        <action
+            android:id="@+id/action_shoesListFragment_to_shoesDetailFragment"
+            app:destination="@id/shoesDetailFragment" />
+    </fragment>
+
+</navigation>
