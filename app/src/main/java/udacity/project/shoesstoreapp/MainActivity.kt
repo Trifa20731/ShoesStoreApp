@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         // TODO: Fix the Fragment Showing Problem
-        navHostFragment = this.supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment
         navController = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this, navController)
     }
