@@ -29,7 +29,11 @@
         android:id="@+id/shoesDetailFragment"
         android:name="udacity.project.shoesstoreapp.presentation.shoesdetail.ShoesDetailFragment"
         android:label="ShoesDetailFragment"
-        tools:layout="@layout/fragment_shoes_detail"/>
+        tools:layout="@layout/fragment_shoes_detail">
+        <action
+            android:id="@+id/action_shoesDetailFragment_to_shoesListFragment"
+            app:destination="@id/shoesListFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/welcomeFragment"
@@ -49,6 +53,22 @@
         <action
             android:id="@+id/action_shoesListFragment_to_shoesDetailFragment"
             app:destination="@id/shoesDetailFragment" />
+        <argument
+            android:name="shoesName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="shoesCompany"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="shoesSize"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="shoesDescription"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

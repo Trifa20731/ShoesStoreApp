@@ -1,4 +1,4 @@
-package udacity.project.shoesstoreapp.presentation.shoeslist
+package udacity.project.shoesstoreapp
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -6,9 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import udacity.project.shoesstoreapp.model.Shoes
 
-class ShoesListFragmentVM : ViewModel(){
+class MainActivityVM : ViewModel() {
     companion object {
-        private const val LOG_TAG = "ShoesListFragmentVM"
+        private const val LOG_TAG = "MainActivityVM"
     }
 
 
@@ -16,30 +16,26 @@ class ShoesListFragmentVM : ViewModel(){
 
 
     // The whole list of the shoes.
-    private val _shoesList = MutableLiveData<Shoes>()
-    val shoesList: LiveData<Shoes>
+    private val _shoesList = MutableLiveData<ArrayList<Shoes>>()
+    val shoesList: LiveData<ArrayList<Shoes>>
         get() = _shoesList
 
 
 //--------------------------- Initialization ------------------------------------------------------
 
+
     init {
-        Log.i(LOG_TAG, "Shoes List Fragment View model create.")
-        initShoesList()
+        Log.i(LOG_TAG, "Main Activity View Model create.")
     }
 
 
 //--------------------------- List Function -------------------------------------------------------
 
 
-    /** Initialization the shoes list at the beginning. */
-    private fun initShoesList() {
-
-    }
-
     /** The function is used to add new shoes into the list. */
-    private fun addShoes() {
-
+    fun addShoes() {
+        Log.i(LOG_TAG, "addShoes(): run.")
+        Log.i(LOG_TAG, "The shoes list isEmpty?")
     }
 
 
@@ -51,4 +47,6 @@ class ShoesListFragmentVM : ViewModel(){
         super.onCleared()
         Log.i(LOG_TAG, "onCleared(): run")
     }
+
+
 }
