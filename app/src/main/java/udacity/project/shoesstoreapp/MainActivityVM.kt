@@ -6,7 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import udacity.project.shoesstoreapp.model.Shoes
 
+/** The View Model is used to store the data in the main activity. */
 class MainActivityVM : ViewModel() {
+
     companion object {
         private const val LOG_TAG = "MainActivityVM"
     }
@@ -23,9 +25,10 @@ class MainActivityVM : ViewModel() {
 
 //--------------------------- Initialization ------------------------------------------------------
 
-
+    /** The Initialization block */
     init {
         Log.i(LOG_TAG, "Main Activity View Model create.")
+        _shoesList.value = ArrayList<Shoes>()
     }
 
 
@@ -33,9 +36,8 @@ class MainActivityVM : ViewModel() {
 
 
     /** The function is used to add new shoes into the list. */
-    fun addShoes() {
-        Log.i(LOG_TAG, "addShoes(): run.")
-        Log.i(LOG_TAG, "The shoes list isEmpty?")
+    fun addShoes(shoes: Shoes) {
+        _shoesList.value?.add(shoes)
     }
 
 
