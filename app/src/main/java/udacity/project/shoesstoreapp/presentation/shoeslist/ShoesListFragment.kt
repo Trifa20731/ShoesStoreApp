@@ -79,30 +79,30 @@ class ShoesListFragment : Fragment() {
 
 
     private fun updateShoesList(shoesList: ArrayList<Shoes>) {
-        binding.shoesListItemContainerLL.removeAllViews()
+        if (shoesList.isNotEmpty()) {
+            binding.shoesListItemContainerLL.removeAllViews()
+            // Add the view.
+            for (shoesItem in shoesList) {
+                val inflater = LayoutInflater.from(context).inflate(R.layout.list_item_shoes, null)
+                binding.shoesListItemContainerLL.addView(
+                    inflater,
+                    binding.shoesListItemContainerLL.childCount
+                )
+            }
 
-        // Add the view.
-        for (shoesItem in shoesList) {
-            val inflater = LayoutInflater.from(context).inflate(R.layout.list_item_shoes, null)
-            binding.shoesListItemContainerLL.addView(
-                inflater,
-                binding.shoesListItemContainerLL.childCount
-            )
-        }
-
-        val count = binding.shoesListItemContainerLL.childCount
-        var v: View?
-        for (i in 0 until count) {
-            v = binding.shoesListItemContainerLL.getChildAt(i)
-            val shoesNameTV: TextView = v.findViewById(R.id.shoesNameTV)
-            val shoesCompanyTV: TextView = v.findViewById(R.id.shoesCompanyTV)
-            val shoesSizeTV: TextView = v.findViewById(R.id.shoesSizeTV)
-            val shoesDescriptionTV: TextView = v.findViewById(R.id.shoesDescriptionTV)
-            shoesNameTV.text = shoesList[i].name
-            shoesCompanyTV.text = shoesList[i].company
-            shoesSizeTV.text = shoesList[i].size
-            shoesDescriptionTV.text = shoesList[i].description
+            val count = binding.shoesListItemContainerLL.childCount
+            var v: View?
+            for (i in 0 until count) {
+                v = binding.shoesListItemContainerLL.getChildAt(i)
+                val shoesNameTV: TextView = v.findViewById(R.id.shoesNameTV)
+                val shoesCompanyTV: TextView = v.findViewById(R.id.shoesCompanyTV)
+                val shoesSizeTV: TextView = v.findViewById(R.id.shoesSizeTV)
+                val shoesDescriptionTV: TextView = v.findViewById(R.id.shoesDescriptionTV)
+                shoesNameTV.text = shoesList[i].name
+                shoesCompanyTV.text = shoesList[i].company
+                shoesSizeTV.text = shoesList[i].size
+                shoesDescriptionTV.text = shoesList[i].description
+            }
         }
     }
-
 }

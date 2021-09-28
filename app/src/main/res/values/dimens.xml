@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="base_layout_margin">24dp</dimen>
+    <dimen name="base_layout_padding">24dp</dimen>
+
+    <dimen name="base_item_margin">16dp</dimen>
+    <dimen name="base_item_padding">8dp</dimen>
+
+    <dimen name="inner_item_margin">8dp</dimen>
+    <dimen name="inner_item_padding">8dp</dimen>
+
+    <dimen name="user_icon_height">80dp</dimen>
+    <dimen name="user_icon_width">80dp</dimen>
+
+    <dimen name="list_item_height"> 150dp </dimen>
+    <dimen name="list_item_cover_height"> 100dp </dimen>
+    <dimen name="list_item_cover_width"> 100dp </dimen>
+
+    <dimen name="split_bar_height">1dp</dimen>
+    <dimen name="split_bar_margin">8dp</dimen>
+
+</resources>
