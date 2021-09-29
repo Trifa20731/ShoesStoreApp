@@ -12,8 +12,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import udacity.project.shoesstoreapp.databinding.ActivityMainBinding
 
+/**
+ * This class has the UI logic of the main activity.
+ *
+ * @see AppCompatActivity
+ * */
 class MainActivity : AppCompatActivity() {
 
+    // Binding and Navigation Parameter Declaration.
     private lateinit var navController: NavController
     private lateinit var navHostFragment: NavHostFragment
     private lateinit var binding: ActivityMainBinding

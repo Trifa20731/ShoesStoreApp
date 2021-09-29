@@ -1,6 +1,7 @@
 package udacity.project.shoesstoreapp.presentation.shoesdetail
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,10 @@ import udacity.project.shoesstoreapp.databinding.FragmentShoesDetailBinding
 import udacity.project.shoesstoreapp.model.Shoes
 
 class ShoesDetailFragment : Fragment() {
+
+    companion object {
+        const val LOG_TAG = "ShoesDetailFragment"
+    }
 
     // Binding Object for the shoesDetailFragment.
     // Name of the object is derived from the name of the activity or fragment.
@@ -64,7 +69,7 @@ class ShoesDetailFragment : Fragment() {
             shoes?.name = shoesNameET.text.toString()
             shoes?.company = shoesCompanyET.text.toString()
             shoes?.size = shoesSizeET.text.toString()
-            shoes?.description = shoesDescriptionET.toString()
+            shoes?.description = shoesDescriptionET.text.toString()
         }
         sharedVM.addShoes(shoes)
         view.findNavController().navigate(R.id.action_shoesDetailFragment_to_shoesListFragment)

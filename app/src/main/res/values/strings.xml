@@ -1,5 +1,36 @@
 <resources>
     <string name="app_name">ShoesStoreApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Log In Screen -->
+    <string name="log_in_TV_label">Log In</string>
+    <string name="username_TV_label">Username:</string>
+    <string name="password_TV_label">Password:</string>
+    <string name="log_in_BTN_label">Log In</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_TV_label">Welcome</string>
+    <string name="welcome_description_TV_label">Welcome to Sports Shoes Store</string>
+    <string name="see_instruction_BTN_label">See Instruction</string>
+
+    <!-- Instruction Screen -->
+    <string name="instruction_TV_label">Instruction</string>
+    <string name="instruction_description_TV_label">Add The Shoes You Like</string>
+    <string name="start_BTN_label">Start</string>
+
+    <!-- Shoes List Screen -->
+    <string name="shoes_list_TV_label">Shoes List</string>
+    <string name="empty_list_TV_label">Please add shoes into the list.</string>
+    <string name="floating_BTN_description">Floating button to add new shoes detail.</string>
+
+    <!-- Shoes Detail Screen And Shoes Item -->
+    <string name="shoes_detail_TV_label">Shoes Detail</string>
+    <string name="name_TV_label">Name:</string>
+    <string name="company_TV_label">Company:</string>
+    <string name="size_TV_label">Size:</string>
+    <string name="description_TV_label">Description:</string>
+    <string name="save_BTN_label">Save</string>
+    <string name="cancel_BTN_label">Cancel</string>
+
 </resources>

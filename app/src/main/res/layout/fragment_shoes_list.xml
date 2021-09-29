@@ -13,8 +13,9 @@
             android:id="@+id/shoesListTitleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Shoes List"
+            style="@style/highlight_title_black"
+            android:layout_marginTop="@dimen/base_layout_margin"
+            android:text="@string/shoes_list_TV_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -22,11 +23,8 @@
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/base_layout_margin"
+            app:layout_constraintBottom_toTopOf="@+id/addNewShoesDetailFloatingABtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shoesListTitleTV">
@@ -35,14 +33,15 @@
                 android:id="@+id/shoesListItemContainerLL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="@dimen/inner_item_padding">
 
                 <TextView
                     android:id="@+id/emptyListTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Please add shoes into the list."/>
+                    style="@style/highlight_subtitle_black"
+                    android:text="@string/empty_list_TV_label" />
 
             </LinearLayout>
         </ScrollView>
@@ -51,10 +50,9 @@
             android:id="@+id/addNewShoesDetailFloatingABtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            android:contentDescription="Floating button to add new shoes detail."
+            android:layout_marginEnd="@dimen/base_layout_margin"
+            android:layout_marginBottom="@dimen/base_layout_margin"
+            android:contentDescription="@string/floating_BTN_description"
             android:src="@drawable/ic_baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
