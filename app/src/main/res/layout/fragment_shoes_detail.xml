@@ -1,21 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.welcome.WelcomeFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="shoes"
+            type="udacity.project.shoesstoreapp.model.Shoes" />
+    </data>
 
-    <TextView
-        android:id="@+id/shoesDetailTitleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Shoes Detail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/p_6"
+        tools:context=".presentation.welcome.WelcomeFragment">
+
+        <TextView
+            android:id="@+id/shoesDetailTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/highlight_title_black"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/shoes_detail_TV_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoesNameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/highlight_subtitle_black"
+                    android:layout_weight="2"
+                    android:text="@string/name_TV_label" />
+
+                <EditText
+                    android:id="@+id/shoesNameET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@={shoes.name}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoesCompanyTV"
+                    android:layout_width="0dp"
+                    style="@style/highlight_subtitle_black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/company_TV_label" />
+
+                <EditText
+                    android:id="@+id/shoesCompanyET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@={shoes.company}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoesSizeTV"
+                    android:layout_width="0dp"
+                    style="@style/highlight_subtitle_black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/size_TV_label" />
+
+                <EditText
+                    android:id="@+id/shoesSizeET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@={shoes.size}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shoesDescriptionTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/highlight_subtitle_black"
+                    android:layout_weight="2"
+                    android:text="@string/description_TV_label" />
+
+                <EditText
+                    android:id="@+id/shoesDescriptionET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text="@={shoes.description}"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/save_BTN_label" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/cancel_BTN_label" />
+
+    </RelativeLayout>
+</layout>
