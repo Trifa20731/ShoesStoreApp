@@ -1,20 +1,23 @@
 package udacity.project.shoesstoreapp.presentation.shoesdetail
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import udacity.project.shoesstoreapp.MainActivityVM
 import udacity.project.shoesstoreapp.R
 import udacity.project.shoesstoreapp.databinding.FragmentShoesDetailBinding
 import udacity.project.shoesstoreapp.model.Shoes
 
+/**
+ * Fragment Class inflate the Shoes Detail UI.
+ *
+ * @see Fragment
+ * */
 class ShoesDetailFragment : Fragment() {
 
     companion object {
@@ -62,7 +65,8 @@ class ShoesDetailFragment : Fragment() {
 
     /**
      * Click handler for the Cancel button.
-     * TODO: Handle the empty input case.
+     *
+     *
      */
     private fun saveShoesAdd(view: View) {
         binding.apply {

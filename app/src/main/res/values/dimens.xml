@@ -1,23 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2016 The TensorFlow Authors. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
 <resources>
+    <dimen name="frame_height">112dp</dimen>
+    <dimen name="image_button_padding">20dp</dimen>
+    <dimen name="button_elevation_material">2dp</dimen>
+    <!-- Z translation to apply when button is pressed -->
+    <dimen name="button_pressed_z_material">4dp</dimen>
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
 
-    <dimen name="base_layout_margin">24dp</dimen>
-    <dimen name="base_layout_padding">24dp</dimen>
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    <dimen name="m_0">1dp</dimen>
+    <dimen name="m_1">2dp</dimen>
+    <dimen name="m_2">4dp</dimen>
+    <dimen name="m_3">8dp</dimen>
+    <dimen name="m_4">16dp</dimen>
+    <dimen name="m_5">24dp</dimen>
+    <dimen name="m_6">32dp</dimen>
+    <dimen name="m_7">40dp</dimen>
+    <dimen name="m_8">48dp</dimen>
+    <dimen name="m_9">56dp</dimen>
+    <dimen name="m_10">64dp</dimen>
+    <dimen name="m_11">72dp</dimen>
+    <dimen name="m_12">80dp</dimen>
+    <dimen name="m_13">88dp</dimen>
+    <dimen name="m_14">96dp</dimen>
+    <dimen name="m_15">104dp</dimen>
+    <dimen name="m_16">112dp</dimen>
+    <dimen name="m_17">120dp</dimen>
+    <dimen name="m_18">128dp</dimen>
+    <dimen name="m_19">136dp</dimen>
 
-    <dimen name="base_item_margin">16dp</dimen>
-    <dimen name="base_item_padding">8dp</dimen>
+    <dimen name="p_0">1dp</dimen>
+    <dimen name="p_1">2dp</dimen>
+    <dimen name="p_2">4dp</dimen>
+    <dimen name="p_3">8dp</dimen>
+    <dimen name="p_4">16dp</dimen>
+    <dimen name="p_5">24dp</dimen>
+    <dimen name="p_6">32dp</dimen>
+    <dimen name="p_7">40dp</dimen>
+    <dimen name="p_8">48dp</dimen>
+    <dimen name="p_9">56dp</dimen>
+    <dimen name="p_10">64dp</dimen>
+    <dimen name="p_11">72dp</dimen>
+    <dimen name="p_12">80dp</dimen>
+    <dimen name="p_13">88dp</dimen>
+    <dimen name="p_14">96dp</dimen>
+    <dimen name="p_15">104dp</dimen>
+    <dimen name="p_16">112dp</dimen>
+    <dimen name="p_17">120dp</dimen>
+    <dimen name="p_18">128dp</dimen>
+    <dimen name="p_19">136dp</dimen>
 
-    <dimen name="inner_item_margin">8dp</dimen>
-    <dimen name="inner_item_padding">8dp</dimen>
-
-    <dimen name="user_icon_height">80dp</dimen>
-    <dimen name="user_icon_width">80dp</dimen>
-
-    <dimen name="list_item_height"> 150dp </dimen>
-    <dimen name="list_item_cover_height"> 100dp </dimen>
-    <dimen name="list_item_cover_width"> 100dp </dimen>
-
-    <dimen name="split_bar_height">1dp</dimen>
-    <dimen name="split_bar_margin">8dp</dimen>
-
+    <dimen name="f_0">8sp</dimen>
+    <dimen name="f_1">9sp</dimen>
+    <dimen name="f_2">10sp</dimen>
+    <dimen name="f_3">11sp</dimen>
+    <dimen name="f_4">12sp</dimen>
+    <dimen name="f_5">14sp</dimen>
+    <dimen name="f_6">16sp</dimen>
+    <dimen name="f_7">18sp</dimen>
+    <dimen name="f_8">20sp</dimen>
+    <dimen name="f_9">22sp</dimen>
+    <dimen name="f_10">24sp</dimen>
+    <dimen name="f_11">28sp</dimen>
+    <dimen name="f_12">32sp</dimen>
+    <dimen name="f_13">40sp</dimen>
+    <dimen name="f_14">48sp</dimen>
+    <dimen name="f_15">56sp</dimen>
+    <dimen name="f_16">64dp</dimen>
+    <dimen name="f_17">72dp</dimen>
+    <dimen name="f_18">80dp</dimen>
+    <dimen name="f_19">88dp</dimen>
 </resources>

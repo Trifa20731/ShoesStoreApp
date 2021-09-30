@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/base_layout_padding"
+        android:padding="@dimen/p_4"
         tools:context=".presentation.welcome.WelcomeFragment">
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/highlight_subtitle_black"
-            android:layout_marginTop="@dimen/base_item_margin"
+            android:layout_marginTop="@dimen/m_4"
             android:text="@string/welcome_description_TV_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

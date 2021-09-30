@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/highlight_title_black"
-            android:layout_marginTop="@dimen/base_layout_margin"
+            android:layout_marginTop="@dimen/m_4"
             android:text="@string/shoes_list_TV_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +23,7 @@
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/base_layout_margin"
+            android:layout_margin="@dimen/m_4"
             app:layout_constraintBottom_toTopOf="@+id/addNewShoesDetailFloatingABtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/inner_item_padding">
+                android:padding="@dimen/p_2">
 
                 <TextView
                     android:id="@+id/emptyListTV"
@@ -50,8 +50,8 @@
             android:id="@+id/addNewShoesDetailFloatingABtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/base_layout_margin"
-            android:layout_marginBottom="@dimen/base_layout_margin"
+            android:layout_marginEnd="@dimen/m_4"
+            android:layout_marginBottom="@dimen/m_4"
             android:contentDescription="@string/floating_BTN_description"
             android:src="@drawable/ic_baseline_add_24"
             app:layout_constraintBottom_toBottomOf="parent"

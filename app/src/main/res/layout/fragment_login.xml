@@ -14,7 +14,7 @@
             style="@style/highlight_title_black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/base_layout_margin"
+            android:layout_marginBottom="@dimen/m_8"
             android:text="@string/log_in_TV_label"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,8 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginStart="@dimen/base_item_margin"
-            android:layout_marginEnd="@dimen/base_item_margin"
+            android:layout_marginStart="@dimen/m_5"
+            android:layout_marginEnd="@dimen/m_5"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/inner_item_padding">
+                android:padding="@dimen/p_3">
 
                 <TextView
                     android:id="@+id/shoesNameTV"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/inner_item_padding">
+                android:padding="@dimen/p_3">
 
                 <TextView
                     android:id="@+id/shoesCompanyTV"

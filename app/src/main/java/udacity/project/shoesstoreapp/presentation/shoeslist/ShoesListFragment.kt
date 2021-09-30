@@ -19,6 +19,11 @@ import udacity.project.shoesstoreapp.R
 import udacity.project.shoesstoreapp.databinding.FragmentShoesListBinding
 import udacity.project.shoesstoreapp.model.Shoes
 
+/**
+ * The Fragment Class is used to construct a shoes list screen.
+ *
+ * @See Fragment
+ * */
 class ShoesListFragment : Fragment() {
 
     companion object {
@@ -31,9 +36,19 @@ class ShoesListFragment : Fragment() {
      * tell the program that we are willing to use the instance of the Activity this fragment is attached to. */
     private val sharedVM: MainActivityVM by activityViewModels()
 
+
 //--------------------------------------------------------- OnCreate View Function -----------------------------------------------------------------------------
 
-    /** The method is used to draw the layout the fragment. */
+
+    /**
+     * Called to have the fragment instantiate its user interface view.
+     *
+     * @param inflater The LayoutInflater object that can be used to inflate any views in the fragment
+     * @param container  If non-null, this is the parent view that the fragment's UI should be attached to.
+     * @param savedInstanceState  If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     *
+     * @return the View for the fragment's UI, or null.
+     * */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -55,20 +70,40 @@ class ShoesListFragment : Fragment() {
         return binding.root
     }
 
-    /** The method will execute after drawing the element on the fragment. */
+    /**
+     * The method will execute after drawing the element on the fragment.
+     *
+     * @param view The view return by onCreateView.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state as given here.
+     *        This value may be null.
+     * */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedVM.shoesList.observe(viewLifecycleOwner, Observer { updateShoesList(it) })
     }
 
+
 //--------------------------- Menu Related Functions -----------------------------------------------
 
 
+    /**
+     * Initialize the contents of the Activity's standard options menu.
+     *
+     * @param menu The options menu in which you place your items.
+     * @param inflater The inflater used for menu.
+     * */
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.infor_menu, menu)
     }
 
+    /**
+     * This hook is called whenever an item in your options menu is selected.
+     *
+     * @param item The menu item that was selected.
+     *
+     * @return boolean Return false to allow normal menu processing to proceed, true to consume it here.
+     * */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
@@ -78,6 +113,11 @@ class ShoesListFragment : Fragment() {
 //--------------------------- Update the shoes list UI ---------------------------------------------
 
 
+    /**
+     * The method to update the shoes list UI.
+     *
+     * @param shoesList The list of the shoes.
+     * */
     private fun updateShoesList(shoesList: ArrayList<Shoes>) {
         if (shoesList.isNotEmpty()) {
             binding.shoesListItemContainerLL.removeAllViews()
